@@ -10,35 +10,37 @@ public class OperacionesGeometricas {
 	double alt;
 	double radio;
 	final double n = 3.1416;
-	final String circulos = "circulos";
-	final String rectangulos = "rectangulos";
-	String resp;
+	char resp;
+	
 
 
 	
-	System.out.print("\n¿Quieres realizar operaciones con circulos o con rectangulos?");
+	System.out.print("\n¿Quiére realizar operaciones con Circulos o con Rectangulos? Seleccione C para circulos, R para rectangulos o S para salir del programa.");
 
 	
 	Scanner sc = new Scanner(System.in);
-		resp = sc.toString();
+		resp = sc.next().charAt(0);
 
+	while (resp != 'S'){
 	
-		if (resp.equals("circulos")) {
+		if (resp == 'C') {
 			
 		
-			double resultadoArea, resultadoCircunferencia;
-			Circulo op = new Circulo();
+			
+			Circulo op = new Circulo(0);
 
 			Scanner scanner = new Scanner(System.in);
 				System.out.print("\nMete el radio del círculo: ");
 				radio = scanner.nextFloat();
 
-			
-			resultadoArea = op.area(radio, n);
-			resultadoCircunferencia = op.circun(radio, n);
+			op.setRadio(radio);
 
-			System.out.println("\nEl resultado del Area es: " + resultadoArea);
-			System.out.println("\nEl resultado de la Circunferencia es: " + resultadoCircunferencia);
+
+			result = op.area(n);
+			result = op.circun(n);
+
+			System.out.println("\nEl resultado del Area es: " + result);
+			System.out.println("\nEl resultado de la Circunferencia es: " + result);
 
 			
 		}
@@ -46,9 +48,9 @@ public class OperacionesGeometricas {
 			System.out.print("\nNo es una respuesta válida");
 		}
 		
-		if (resp.equals("rectangulos")) {
+		if (resp == 'R') {
 
-			 Rectangulo rect = new Rectangulo();
+			 Rectangulo rect = new Rectangulo(0, 0);
 
 	 		 Scanner scaner = new Scanner(System.in);
           			System.out.print("\ningresa la base: ");
@@ -70,6 +72,13 @@ public class OperacionesGeometricas {
 	}
 	else {
 		System.out.print("\nNo es una respuesta válida");
-}	
+}
+
+	}
+		System.out.print("\n¿Quiére realizar operaciones con Circulos o con Rectangulos? Seleccione C para circulos, R para rectangulos o S para salir del programa.");
+
+	
+	Scanner scanner = new Scanner(System.in);
+		resp = scanner.next().charAt(0);	
 	}
 }

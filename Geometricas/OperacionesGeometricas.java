@@ -10,24 +10,24 @@ public class OperacionesGeometricas {
 	double alt;
 	double radio;
 	final double n = 3.1416;
-	final String circulos = "circulos";
-	final String rectangulos = "rectangulos";
-	String resp;
+	char resp;
+	
 
 
 	
-	System.out.print("\n¿Quieres realizar operaciones con circulos o con rectangulos?");
+	System.out.print("\n¿Quiére realizar operaciones con Circulos o con Rectangulos? Seleccione C para circulos, R para rectangulos o S para salir del programa.");
 
 	
 	Scanner sc = new Scanner(System.in);
-		resp = sc.next();
+		resp = sc.next().charAt(0);
 
+	while (resp != 'S'){
 	
-		if (resp.equals("circulos")) {
+		if (resp == 'C') {
 			
 		
 			
-			Circulo op = new Circulo(4);
+			Circulo op = new Circulo(0);
 
 			Scanner scanner = new Scanner(System.in);
 				System.out.print("\nMete el radio del círculo: ");
@@ -48,7 +48,7 @@ public class OperacionesGeometricas {
 			System.out.print("\nNo es una respuesta válida");
 		}
 		
-		if (resp.equals("rectangulos")) {
+		if (resp == 'R') {
 
 			 Rectangulo rect = new Rectangulo(0, 0);
 
@@ -72,6 +72,14 @@ public class OperacionesGeometricas {
 	}
 	else {
 		System.out.print("\nNo es una respuesta válida");
-}	
+}
+System.out.print("\n¿Quiére realizar operaciones con Circulos o con Rectangulos? Seleccione C para circulos, R para rectangulos o S para salir del programa.");
+
+
+	Scanner scanner = new Scanner(System.in);
+		resp = scanner.next().charAt(0);	
+	}
+		
+	
 	}
 }
