@@ -1,0 +1,24 @@
+ /*
+ * Programa que pide una nota por teclado y muestra si se ha aprobado o no
+ */
+
+//Éste import importa el paquete java.util para hacer posible la utilización de sus clases predefinidas 
+import java.util.*;
+//La declaración de la clase
+public class Codigo4 {
+//El método que debe declararse sí o sí
+    public static void main( String[] args ){
+	//La llamada a la clase Scanner
+        Scanner sc = new Scanner( System.in );
+        System.out.print("Nota: ");
+	//El valor que toma la variable nota desde el teclado
+        int nota = sc.nextInt();
+	//La estructura condicional if
+        if (nota >= 5 ){
+            System.out.println("Enorabuena!!");
+            System.out.println("Has aprobado");
+        }
+        else
+            System.out.println("Lo Siento, has suspendido");
+    }
+}
