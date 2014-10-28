@@ -1,5 +1,6 @@
 import java.io.*;
-import java.lang.*;
+
+import java.util.*;
 
 public class ProcessBuilderPrueba { 
 
@@ -33,17 +34,5 @@ public class ProcessBuilderPrueba {
       
         }
         
-        
-        try {
-           
-            int exitValue = proceso.waitFor();
-           
-            System.out.println("\n\nEl exitValue es " + exitValue);
-        } 
-
-        catch (InterruptedException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
     }
 }

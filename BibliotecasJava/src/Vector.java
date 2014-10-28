@@ -2,7 +2,7 @@ import java.util.*;
 public class Vector {
 public static void main (String args[]) {
 
-Vector <Object> vec = new Vector <Object>();
+Vector <Object> vec = new Vector <Object>(int);
 
 
 vec.addElement(1);
