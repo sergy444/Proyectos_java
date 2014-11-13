@@ -1,74 +1,54 @@
 public class Habitante{
-	int edad = 0;
-	private String edad;
+	private int edad;
 	private String nombre;
-	int vivo = 0;
+	private String dni;
+	
 
-	public Habitante(String nombre, int edad, String dni){
-		this.nombre=nombre;
+	public Habitante(int edad, String nombre, String dni){
 		this.edad=edad;
+		this.nombre=nombre;
 		this.dni=dni;
+		
 	}
 
 	public int getEdad() {
 
-		return edad;
+		return this.edad;
 	}	
 
 	public void setEdad(int edad) {
 
-		edad = edad;
+		this.edad = edad;
 	}
 
 	public String getNombre() {
 
-		return nombre;
+		return this.nombre;
 	}	
 
 	public void setNombre(String nombre) {
 
-		nombre = nombre;
+		this.nombre = nombre;
 	}
 
 public String getDni() {
 
-		return dni;
+		return this.dni;
 	}	
 
 	public void setDni(String dni) {
 
-		dni = dni;
-	}
-
-ublic int getVivo() {
-
-		return vivo;
-	}	
-
-	public void setEdad(int vivo) {
-
-		vivo = vivo;
+		this.dni = dni;
 	}
 
 
-public boolean estado(){
-
-	if(this.vivo=1){
-
-		return true;
-
-		else{
-			
-			return false;
-		}
-	}
 
 public boolean votar(){
 
 if (this.edad>=18) {
 
 	return true;
-
+}
 	else{
 
 		return false;
@@ -76,5 +56,4 @@ if (this.edad>=18) {
 }
 
 }
-}
-}
+

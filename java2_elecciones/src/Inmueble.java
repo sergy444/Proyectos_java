@@ -1,7 +1,7 @@
 public class Inmueble{
 
 	private String calle;
-	int precio = 0;
+	private int precio;
 	private char puerta;
 
 	public Inmueble(String calle, int precio, char puerta){
@@ -11,33 +11,35 @@ public class Inmueble{
 		
 	}
 
-	public int getPrecio() {
-
-		return precio;
-	}	
-
-	public void setPrecio(int precio) {
-
-		precio = precio;
-	}
-
 	public String getCalle() {
 
-		return calle;
+		return this.calle;
 	}	
 
 	public void setCalle(String calle) {
 
-		calle = calle;
+		this.calle = calle;
 	}
 
-public char getUbicacion() {
+	public int getPrecio() {
+
+		return this.precio;
+	}	
+
+	public void setPrecio(int precio) {
+
+		this.precio = precio;
+	}
+
+	
+
+public char getPuerta() {
 
 		return puerta;
 	}	
 
-	public void setUbicacion(char puerta) {
+	public void setPuerta(char puerta) {
 
-		puerta = puerta;
+		this.puerta = puerta;
 	}
 }

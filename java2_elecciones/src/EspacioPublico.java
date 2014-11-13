@@ -11,33 +11,35 @@ public class EspacioPublico{
 		
 	}
 
-	public int getMcuad() {
-
-		return mcuad;
-	}	
-
-	public void setMcuad(int mcuad) {
-
-		mcuad = mcuad;
-	}
-
 	public String getDireccion() {
 
-		return direccion;
+		return this.direccion;
 	}	
 
 	public void setDireccion(String direccion) {
 
-		direccion = direccion;
+		this.direccion = direccion;
 	}
 
-public char getTipoespacio() {
+	public int getMcuad() {
 
-		return tipoespacio;
+		return this.mcuad;
 	}	
 
-	public void setUbicacion(char tipoespacio) {
+	public void setMcuad(int mcuad) {
 
-		tipoespacio = tipoespacio;
+		this.mcuad = mcuad;
+	}
+
+	
+
+public String getTipoespacio() {
+
+		return this.tipoespacio;
+	}	
+
+	public void setTipoespacio(String tipoespacio) {
+
+		this.tipoespacio = tipoespacio;
 	}
 }

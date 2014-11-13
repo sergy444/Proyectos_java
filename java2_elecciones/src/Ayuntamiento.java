@@ -6,41 +6,41 @@ public class Ayuntamiento{
 	
 	
 
-	public Ayuntamiento(String calle, int numsalas){
-		this.calle=calle;
+	public Ayuntamiento(String ubicacion, int numsalas, String alcalde){
+		this.ubicacion=ubicacion;
 		this.numsalas=numsalas;
-		
+		this.alcalde=alcalde;
 	}
 
-	public int getNumsalas() {
+	public String getUbicacion() {
 
-		return numsalas;
-	}	
-
-	public void setNumsalas(int numsalas) {
-
-		numsalas = numsalas;
-	}
-
-
-
-public String getUbicacion() {
-
-		return ubicacion;
+		return this.ubicacion;
 	}	
 
 	public void setUbicacion(String ubicacion) {
 
-		ubicacion = ubicacion;
+		this.ubicacion = ubicacion;
 	}
+
+	public int getNumsalas() {
+
+		return this.numsalas;
+	}	
+
+	public void setNumsalas(int numsalas) {
+
+		this.numsalas = numsalas;
+	}
+
+
 
 	public String getAlcalde() {
 
-		return alcalde;
+		return this.alcalde;
 	}	
 
 	public void setAlcalde(String alcalde) {
 
-		alcalde = alcalde;
+		this.alcalde = alcalde;
 	}
 }
