@@ -12,7 +12,7 @@ public class CenaAmigos{
 
 		Scanner sc = new Scanner(System.in);
 
-		System.out.print("\nBuenas querido cliente.\n");
+		System.out.print("\nBuenas, querido cliente.\n");
 
 		System.out.print("\nPor favor introduzca el número de recetas que quiera utilizar: ");
 
@@ -20,7 +20,7 @@ public class CenaAmigos{
 
 		ArrayList<Receta> recetas = new ArrayList<Receta>();
 
-		for(int s=1; s<=numRecetas; s++){
+		for(int s=1; s<numRecetas; s++){
 
 			String nombreReceta=null;
 
@@ -40,7 +40,7 @@ public class CenaAmigos{
 			numIngred = sc.nextInt();
 
 
-			for(int i=1; i<=numIngred; i++){
+			for(int i=1; i<numIngred; i++){
 
 				String nombreIngrediente= null;
 
@@ -74,7 +74,7 @@ public class CenaAmigos{
 				}
 				else if(enGramos==false){
 
-					System.out.print("\n¿Cuántas unidades necesitas? ");
+					System.out.print("\n¿Cuántas unidades necesita? ");
 
 					cantidadUnidad=sc.nextInt();
 

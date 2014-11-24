@@ -3,7 +3,7 @@ public class Receta {
 
 	private String nombreReceta;
 	private String preparacion;
-	ArrayList<Ingrediente> ingredientes= null;
+	ArrayList<Ingrediente> ingredientes;
 
 	
 
@@ -14,7 +14,7 @@ public class Receta {
 		this.ingredientes=ingredientes;
 	}
 
-public String getNombreReceta() {
+	public String getNombreReceta() {
 
 		return this.nombreReceta;
 	}	
