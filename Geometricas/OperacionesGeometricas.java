@@ -21,9 +21,9 @@ public class OperacionesGeometricas {
 	Scanner sc = new Scanner(System.in);
 		resp = sc.next().charAt(0);
 
-	while (resp != 'S'){
+	while ((resp != 'S')&&(resp != 's')){
 	
-		if (resp == 'C') {
+		if ((resp == 'C')||(resp == 'c')) {
 			
 		
 			
@@ -48,7 +48,7 @@ public class OperacionesGeometricas {
 			System.out.print("\nNo es una respuesta válida");
 		}
 		
-		if (resp == 'R') {
+		if ((resp == 'R')||(resp == 'r')) {
 
 			 Rectangulo rect = new Rectangulo(0, 0);
 

@@ -1,8 +1,8 @@
 import java.util.*;
-
+import java.io.*;
 public class Elecciones {
  
- public static void main(String[] args) {
+ public static void main(String[] args) throws IOException {
 
 Scanner sc = new Scanner(System.in);
 
@@ -77,7 +77,7 @@ int mcuad = 0;
 String tipoespacio = null;
 
 
-EspacioPublico espacio = new EspacioPublico(direccion, mcuad, tipoespacio);
+EspacioPublico espacio = new EspacioPublico (direccion, mcuad, tipoespacio);
 
 System.out.print("\nIntroduce la dirección del espacio: ");
 direccion = sc.next();
@@ -163,5 +163,91 @@ System.out.print("\nTiene " + partido.getNumafiliados() + " " + "afiliados");
 System.out.print("\nSu posición ideologica es: " + partido.getPosicionideologica()); 
 
 
- }
+
+
+
+File listaPartidos = new File("/home/zubiri/Proyectos_java/java2_elecciones/src/listaPartidos.txt");
+
+	FileInputStream fis = new FileInputStream(listaPartidos);
+		InputStreamReader isr = new InputStreamReader(fis);
+			BufferedReader br = new BufferedReader(isr);
+
+	ArrayList<Partido> partidosCompletos = new ArrayList<Partido>();
+	String linea;
+	linea = br.readLine();
+
+	while(linea!=null){
+
+		String [] variables = linea.split(",");
+		
+	
+		Partido partidos = new Partido(null,0,null,null);
+		partidos.setLider(variables[0]);
+		int num = Integer.parseInt(variables[1]);
+		partidos.setNumafiliados(num);
+		partidos.setPosicionideologica(variables[2]);
+		partidos.setNomenclatura(variables[3]);
+		partidosCompletos.add(partidos);
+		linea = br.readLine();
+	
+}
+System.out.println("\nObjetos leídos de archivo de manera satisfactoria\n\n");
+System.out.println("\nLista de los partidos: \n\n");
+
+	for(int s=0; s < partidosCompletos.size(); s++){
+
+		System.out.println("Líder: " + (partidosCompletos.get(s)).getLider());
+		System.out.println("Número de afiliados: " + (partidosCompletos.get(s)).getNumafiliados());
+		System.out.println("Posición ideologica: " + (partidosCompletos.get(s)).getPosicionideologica());
+		System.out.println("Nombre del partido: " + (partidosCompletos.get(s)).getNomenclatura());
+	System.out.println("--------------------------------------------");
+
+
+}
+
+
+
+
+
+	File listaHabitantes = new File("/home/zubiri/Proyectos_java/java2_elecciones/src/ListaHabitantes.txt");
+
+FileInputStream fis2 = new FileInputStream(listaHabitantes);
+InputStreamReader isr2 = new InputStreamReader(fis2);
+BufferedReader br2 = new BufferedReader(isr2);
+
+ArrayList<Habitante> habitantesFull = new ArrayList<Habitante>();
+
+String lineas;
+
+lineas = br2.readLine();
+
+while(lineas!=null){
+
+String [] spazie = lineas.split(",");
+int ed = Integer.parseInt(spazie[0]);
+if(ed>=18){
+Habitante habitant = new Habitante(0, null,null);
+
+habitant.setEdad(ed);
+habitant.setNombre(spazie[1]);
+habitant.setDni(spazie[2]);
+
+
+habitantesFull.add(habitant);
+lineas = br2.readLine();
+}lineas = br2.readLine();
+}
+System.out.println("\nObjetos leídos de archivo de manera satisfactoria\n\n");
+System.out.println("\nLista de los habitantes mayores de 18 años: \n\n");
+for(int v=0; v < habitantesFull.size(); v++){
+
+System.out.println("Nombre: "+(habitantesFull.get(v)).getNombre());
+System.out.println("Edad: "+(habitantesFull.get(v)).getEdad());
+System.out.println("Dni: "+(habitantesFull.get(v)).getDni());
+System.out.println("--------------------------------------------");
+}	
+}
+
+
+ 
 }

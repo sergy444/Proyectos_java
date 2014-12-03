@@ -73,12 +73,13 @@ public class OperacionesGeometricas {
 	else {
 		System.out.print("\nNo es una respuesta válida");
 }
+System.out.print("\n¿Quiére realizar operaciones con Circulos o con Rectangulos? Seleccione C para circulos, R para rectangulos o S para salir del programa.");
 
-	}
-		System.out.print("\n¿Quiére realizar operaciones con Circulos o con Rectangulos? Seleccione C para circulos, R para rectangulos o S para salir del programa.");
 
-	
 	Scanner scanner = new Scanner(System.in);
 		resp = scanner.next().charAt(0);	
+	}
+		
+	
 	}
 }
