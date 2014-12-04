@@ -1,8 +1,9 @@
 import java.io.File;
 import java.io.FileImputStream;
 import java.io.ImputStreamReader;
-import java.io.BufferedReader;
+import java.io.BufferedReader; 		//importamos las clases de sus respectivos paquetes
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Main {
 
@@ -15,10 +16,11 @@ public class Main {
 			ImputStreamReader fsr = new ImputStreamReader(fis, "UTF8");
 			BufferedReader bf = new BufferedReader(fsr);
 
-			String linea = br.readLine();
+			String linea = bf.readLine();
 			String [] spazie = null;
-			//
+			//leemos el archivo en cuestión
 		while(linea != null) {
+
 			Distribuidor distribuidor = new Distribuidor();
 			Direccion direccion = new Direccion();
 			Contacto contacto = new Contacto();
@@ -47,7 +49,7 @@ public class Main {
 			contacto.setEmail(dooitz[3]);
 			distribuidor.setContacto(contacto);
 			distribuidores.add(distribuidor);
-			linea = br.readLine();
+			linea = bf.readLine();
 
 		for(int i=0; i < distribuidores.size(); i++) {
 
@@ -232,5 +234,71 @@ public class Main {
 			System.out.print("\t\tPiso: "+(distribuidor.getDireccion()).getPiso());
 			System.out.print("\t\tLetra: "+(distribuidor.getDireccion()).getLetra());	
 		}
+
+
+
+		try {
+				//creamos el ArrayList de tipo distribuidor y los contructores necesarios para la lectura del archivo
+			ArrayList<Cliente> clientes = new ArrayList<Cliente>();
+			FileImputStream fis1 = new FileImputStream("./cliente.txt");
+			ImputStreamReader fsr1 = new ImputStreamReader(fis1, "UTF8");
+			BufferedReader bf1 = new BufferedReader(fsr1);
+
+			String lineas = bf1.readLine();
+			String [] sp4zie = null;
+			//
+		while(lineas != null) {
+
+			Cliente cliente = new Cliente();
+			Direccion direccion = new Direccion();
+			sp4zie = lineas.split("#");
+			String clientito = sp4zie[0];
+			String [] doooitz = clientito.split(",");
+			cliente.setNombre(doooitz[0]);
+			cliente.setApellidos(doooitz[1]);
+			cliente.setDni(doooitz[2]);
+
+			clientito = sp4zie[1];
+			doooitz = clientito.split(",");
+			direccion.setCiudad(doooitz[0]);
+			direccion.setCalle(doooitz[1]);
+			int integer = Integer.parseInt(doooitz[3]);
+			direccion.setPiso();
+			char [] array = (doooitz[4]).charToArray();
+			direccion.setLetra();
+			cliente.setDireccion(direccion);
+
+			clientito = sp4zie[3];
+			doooitz = clientito.split(",");
+			double dou = Double.parseDouble(sp4zie[4]);
+			cliente.setNum_Socio();
+			double doub = Double.parseDouble(sp4zie[5]);
+			cliente.setDto();
+			clientes.add(cliente);
+			lineas = bf1.readLine();
+
+
+		for(int ioe=0; ioe < clientes.size(); ioe++) {
+
+				Direccion direccion2 = new Direccion();
+
+				System.out.print("\nCliente num: " + (ioe + 1));
+				System.out.print("Nombre: " + (clientes.get(ioe).getNombre()));
+				System.out.print("Apellidos: " + (clientes.get(ioe).getApellidos()));
+				System.out.print("DNI: " + (clientes.get(ioe).getDni()));
+				direccion2 = clientes.get(ioe).getDireccion();
+				System.out.print("Direccion: ");
+				System.out.print("\tCiudad: " + direccion2.getCiudad());
+				System.out.print("\tCalle: " + direccion2.getCalle());
+				System.out.print("\tNúmero: " + direccion2.getNumero());
+				System.out.print("\tPiso: " + direccion2.getPiso());
+				System.out.print("\tLetra: " + direccion2.getLetra());
+				
+				
+		}
+		}
+		} catch(Exception ioa) {
+			System.out.print("Error en: " + ioa);
+		 }
 	}
 }
