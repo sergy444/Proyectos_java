@@ -4,15 +4,17 @@ public class Direccion {
 	private String calle;
 	private int piso;
 	private char letra;
+	private Contacto contacto;
 
 
 	public Direccion(){}
 
-	public Direccion(String ciudad, String calle, int piso, char letra){
+	public Direccion(String ciudad, String calle, int piso, char letra, Contacto contacto){
 		this.ciudad=ciudad;
 		this.calle=calle;
 		this.piso=piso;
 		this.letra=letra;
+		this.contacto=contacto;
 	}
 
 //métodos getter y setter
@@ -51,6 +53,16 @@ public class Direccion {
 	public void setLetra(char letra) {
 
 		this.letra = letra;
+	}
+
+	public Contacto getContacto(){
+
+		return this.contacto;
+	}
+
+	public void setContacto(Contacto contacto){
+
+		this.contacto=contacto;
 	}
 }
 

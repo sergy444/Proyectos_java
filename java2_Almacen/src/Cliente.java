@@ -7,6 +7,7 @@ private String dni;
 private Direccion direccion;
 private Double num_socio;
 private Double dto;
+
 //constructores
 public Cliente(){}
 
@@ -79,3 +80,4 @@ public Cliente(String nombre, String apellidos, String dni,Direccion direccion, 
 
 		this.dto = dto;
 	}
+}

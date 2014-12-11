@@ -5,14 +5,16 @@ private String tipo;
 private String procedencia;
 private Double eurosLitro;
 private Distribuidor distribuidor;
+private int cod_barras;
 
 public Leche(){}
 
-public Leche(String tipo, String procedencia, Double eurosLitro, Distribuidor distribuidor){
+public Leche(String tipo, String procedencia, Double eurosLitro, Distribuidor distribuidor, int cod_barras){
 	this.tipo=tipo;
 	this.procedencia=procedencia;
 	this.eurosLitro=eurosLitro;
 	this.distribuidor=distribuidor;
+	this.cod_barras=cod_barras;
 
 
 }
@@ -53,5 +55,15 @@ public Leche(String tipo, String procedencia, Double eurosLitro, Distribuidor di
 	public void setDistribuidor(Distribuidor distribuidor) {
 
 		this.distribuidor = distribuidor;
+	}
+
+	public int getCod_barras() {
+
+		return this.cod_barras;
+	}	
+
+	public void setCod_barras(int cod_barras) {
+
+		this.cod_barras = cod_barras;
 	}
 }

@@ -5,15 +5,17 @@ private String procedencia;
 private String color;
 private Double eurosUnidad;
 private Distribuidor distribuidor;
+private int cod_barras;
 
 public Lechuga(){}
 
-public Lechuga(String tipoLechuga, String procedencia, String color, Double eurosUnidad, Distribuidor distribuidor){
+public Lechuga(String tipoLechuga, String procedencia, String color, Double eurosUnidad, Distribuidor distribuidor, int cod_barras){
 	this.tipoLechuga=tipoLechuga;
 	this.procedencia=procedencia;
 	this.color=color;
 	this.eurosUnidad=eurosUnidad;
 	this.distribuidor=distribuidor;
+	this.cod_barras=cod_barras;
 
 
 }
@@ -62,5 +64,15 @@ public Lechuga(String tipoLechuga, String procedencia, String color, Double euro
 	public void setDistribuidor(Distribuidor distribuidor) {
 
 		this.distribuidor = distribuidor;
+	}
+
+	public int getCod_barras() {
+
+		return this.cod_barras;
+	}	
+
+	public void setCod_barras(int cod_barras) {
+
+		this.cod_barras = cod_barras;
 	}
 }
