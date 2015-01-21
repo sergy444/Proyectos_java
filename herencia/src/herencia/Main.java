@@ -5,7 +5,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		//Creamos y mostramos un hombre
-		Hombre hombre = new Hombre(null, 0, null);
+		Hombre hombre = new Hombre("Pepe", 20, "Hombre");
 		hombre.setNombre("Pepe");
 		hombre.setEdad(20);
 		hombre.setSexo("Hombre");
@@ -13,19 +13,13 @@ public class Main {
 		hombre.imprimirHumano();
 		hombre.mear();
 		//Creamos y mostramos una mujer
-		Mujer mujer = new Mujer(null, 0, null);
-		mujer.setNombre("Maria");
-		mujer.setEdad(16);
-		mujer.setSexo("Mujer");
+		Mujer mujer = new Mujer("Maria", 16, "Mujer");
 		
 		mujer.imprimirHumano();
 		mujer.parir();
 		
 		//Creamos y mostramos un bebé
-		Bebe bebe = new Bebe(null, 0, null);
-		bebe.setNombre("Fulanito");
-		bebe.setEdad(1);
-		bebe.setSexo("Hombre");
+		Bebe bebe = new Bebe("Fulanito", 1, "Hombre");
 		
 		bebe.imprimirHumano();
 		bebe.llorar();

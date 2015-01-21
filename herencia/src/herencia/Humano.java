@@ -38,6 +38,7 @@ public class Humano {
 	}
 
 	public void setSexo(String sexo) {
+		
 		this.sexo = sexo;
 	}
 	
@@ -45,5 +46,9 @@ public class Humano {
 			
 		System.out.println(nombre + " tiene " + edad + " años y es " + sexo);
 	}
-
+	
+	public void mear(){
+		
+		System.out.println("Utiliza la vejiga");
+	}
 }

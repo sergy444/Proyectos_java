@@ -9,7 +9,11 @@ public class Bebe extends Humano{
 	}
 	
 	public void llorar(){
-		System.out.println("el bebe llamado " + nombre + " llora");
+		System.out.println("El bebe llamado " + nombre + " llora");
 	} 
-
+	@Override
+	public void mear(){
+		super.mear();
+		System.out.println("Mea en el pañal");
+	}
 }

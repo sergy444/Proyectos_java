@@ -10,7 +10,12 @@ public class Mujer extends Humano{
 	}
 	
 	public void parir(){
-		System.out.println("Esta mujer llamada " + nombre + " esta pariendo un bebe"); ;
+		System.out.println("Esta mujer llamada " + nombre + " esta pariendo un bebe");
 		
+	}
+	@Override
+	public void mear(){
+		super.mear();
+		System.out.println("Mea sentada");
 	}
 }

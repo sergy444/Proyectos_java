@@ -9,7 +9,9 @@ public class Hombre extends Humano{
 	}
 	 
 
+	@Override
 	public void mear(){
+		super.mear();
 		System.out.println("Mea de pie");
 	}
 }
