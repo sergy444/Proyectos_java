@@ -64,7 +64,7 @@ public Lechuga(String tipoLechuga, Double eurosUnidad, Distribuidor distribuidor
 		ArrayList<Lechuga> lechugas = new ArrayList<Lechuga>();
 		System.out.print("\n¿Cuantas lechugas quieres registrar?: ");
 		int opcion = sc.nextInt();
-//creamos el objeto lechuga
+
 		for(int a = 0; a < opcion; a++) {
 
 			Lechuga lechuga = new Lechuga();
@@ -90,7 +90,7 @@ public Lechuga(String tipoLechuga, Double eurosUnidad, Distribuidor distribuidor
 			lechuga.setCod_barras(sc.nextInt());
 		lechugas.add(lechuga);
 		}
-		//Y lo imprimimos por pantalla
+		//Lo imprimimos por pantalla
 
 		 System.out.print("\nLas lechugas: \n");
 
